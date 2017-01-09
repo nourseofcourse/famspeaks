@@ -1,0 +1,76 @@
+/*
+ * 1. Forces word-wrap to wrap hyphen with it
+ */
+.quote {
+  padding: 60px 0;
+  margin: 0;
+  border-left: 0;
+
+  background-color: $color-red;
+
+  @include retina {
+    padding: 30px 0;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    padding: 35px 0;
+  }
+}
+
+  .quote__copy {
+    color: #fff;
+    font-family: "Museo Slab", helvetica, sans-serif;
+    font-size: 43px;
+    line-height: 52px;
+    letter-spacing: -1.55px;
+    position: relative;
+
+    &:before {
+      font-family: 'famspeaks';
+      content: "\e904";
+      font-size: 52px;
+      line-height: 1;
+
+      position: absolute;
+      left: 0;
+      top: -86px;
+      color: #fff;
+      -webkit-text-shadow: 0 10px 30px 0 rgba(0,0,0,0.20);
+         -moz-text-shadow: 0 10px 30px 0 rgba(0,0,0,0.20);
+          -ms-text-shadow: 0 10px 30px 0 rgba(0,0,0,0.20);
+           -o-text-shadow: 0 10px 30px 0 rgba(0,0,0,0.20);
+              text-shadow: 0 10px 30px 0 rgba(0,0,0,0.20);
+    }
+
+    @include retina {
+      font-size: 21px;
+      line-height: 26px;
+      letter-spacing: -.77px;
+
+      &:before {
+        font-size: 26px;
+        top: -40px;
+      }
+    }
+
+    @media (min-width: $screen-sm-min) {
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+
+      font-size: 28px;
+      line-height: 35px;
+      letter-spacing: -1.01px;
+      text-align: center;
+
+      &:before {
+        font-size: 40px;
+        top: -55px;
+      }
+    }
+  }
+
+  .quote__source {
+    color: $color-brown;
+    display: inline-block; // [1]
+  }

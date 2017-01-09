@@ -1,0 +1,40 @@
+{
+  "html": "html",
+  "app": "app",
+  "destination": {
+    "css": "assets/css",
+    "js": "assets/js",
+    "typescript": "app/assets/js",
+    "fonts": "assets/fonts",
+    "vendor": "assets/vendor",
+    "skins": "assets/skins",
+    "examples": "assets/examples"
+  },
+  "source": {
+    "js": "src/js",
+    "typescript": "src/ts",
+    "sass": "src/css",
+    "fonts": "src/fonts",
+    "vendor": "src/vendor",
+    "skins": "src/skins",
+    "examples": "src/examples"
+  },
+  "env": {
+    "dev": "http://kelby.local/html/",
+    "prod": "http://kelbyone.com/"
+  },
+  "bootstrap": {
+    "less": "src/less/bootstrap",
+    "mixins": "src/less/mixins"
+  },
+  "autoprefixerBrowsers": [
+    "Android 2.3",
+    "Android >= 4",
+    "Chrome >= 20",
+    "Firefox >= 24",
+    "Explorer >= 8",
+    "iOS >= 6",
+    "Opera >= 12",
+    "Safari >= 6"
+  ]
+}

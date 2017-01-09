@@ -1,0 +1,25 @@
+.footer {
+  padding: 38px 75px;
+  text-align: center;
+
+  color: #fff;
+  background-color: $color-footer;
+
+  @include retina { 
+    // retina 
+    padding: 19px 37px;
+  }
+}
+
+  .footer__copy {
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: -.83px;
+    margin: 0;
+
+    @include retina { 
+      // retina
+      font-size: 10px;
+      letter-spacing: -.42px;
+    }
+  }

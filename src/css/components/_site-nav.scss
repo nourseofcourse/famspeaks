@@ -1,0 +1,99 @@
+.site-nav {
+  padding: 19px 0;
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+
+  @include retina {
+    padding: 10px 0;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    padding: 16px 0;
+  }
+
+}
+
+  .site-nav__home-link {
+    display: block;
+    float: left;
+
+    @media (min-width: $screen-sm-min) {
+      max-height: 19px;
+      width: auto;
+    }
+  }
+
+  .site-nav__logo {
+    width: auto;
+    display: block;
+    top: -19px;
+    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include retina {
+      max-height: 100%;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      height: 60px;
+      top: -17px;
+      position: relative;
+    }
+  }
+
+  .site-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+  }
+
+    .site-nav__item {
+      float: left;
+      margin-left: 60px;
+      height: 43px;
+
+      @include retina {
+        margin-left: 30px;
+        height: 21px;
+      }
+      @media (min-width: $screen-sm-min) {
+        margin-left: 40px;
+        height: 28px;
+      }
+
+      @media only screen and (max-width : 768px) and (-webkit-min-device-pixel-ratio: 1) { 
+        margin-left: 20px;
+      }
+    }
+
+      .site-nav__link {
+        font-size: 43px;
+        line-height: 1;
+        color: #3B3B47;
+        display: inline-block;
+        vertical-align: top;
+
+        &:hover {
+          color: $color-red;
+          text-decoration: none;
+          border: 0;
+        }
+
+        &:active,
+        &:focus {
+          outline: 0;
+          border: 0;
+          text-decoration: none;
+        }
+
+        @include retina {
+          font-size: 21px;
+        }
+
+        @media (min-width: $screen-sm-min) {
+          font-size: 28px;
+        }
+      }

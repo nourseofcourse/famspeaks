@@ -1,0 +1,87 @@
+
+@font-face {
+    font-family: 'Museo Slab';
+    src: url('../fonts/museo_slab_900-webfont.woff2') format('woff2'),
+         url('../fonts/museo_slab_900-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.button,
+a {
+  -webkit-transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+     -moz-transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+      -ms-transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+       -o-transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+          transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+
+  &:focus {
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+  }
+}
+
+.container {
+
+  @media (max-width: $screen-xs-max) {
+
+    padding-left: 40px;
+    padding-right: 40px;
+    
+    @include retina {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  @media (max-width: $screen-xs-max) {
+
+    padding-left: 40px;
+    padding-right: 40px;
+    
+    @include retina {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+.clearfix {
+  clear: both;
+  overflow: hidden;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid white;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+     -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+       -o-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+
+  @include retina {
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 15px;
+  }
+}

@@ -1,0 +1,37 @@
+@mixin aspect-ratio($width, $height) {
+  display: block;
+    width: 100%;
+    position: relative;
+    height: 0;
+    padding: 56.25% 0 0 0;
+    overflow: hidden;
+  > .content {
+    position: absolute;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+// Calc image intrinsic aspect ratio
+@function get-img-aspect-ratio($img-url){
+  $img-height: image-height(“#{$img-url}”);
+  $img-width: image-width(“#{$img-url}”);
+  $aspect-ratio: $img-height / $img-width;
+
+  @return $aspect-ratio;
+}
+
+@mixin intrinsic-ratio-bg-img($img-url){
+  background-size: contain; // note: could also use ‘cover’ but it is less supported.
+  background-position: top right;
+  background-repeat: no-repeat;
+  padding-top: percentage(get-img-aspect-ratio($img-url));
+  height: 0px !important;
+  display: block;
+}

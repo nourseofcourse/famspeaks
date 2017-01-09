@@ -1,0 +1,63 @@
+.hero {
+  width: 100%;
+  position: relative;
+
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  @media( min-width: $screen-sm-min) {
+    background-image: url(../images/fam-header-sm.jpg);
+    height: 482px;
+  }
+  @media( min-width: $screen-md-min) {
+    background-image: url(../images/fam-header-md.jpg);
+    height: 555px;
+  }
+  @media( min-width: $screen-lg-min) {
+    background-image: url(../images/fam-header-lg.jpg);
+    height: 700px;
+  }
+  @media(min-width: 1440px) {
+    background-image: url(../images/fam-header-xlg.jpg);
+    height: 875px;
+  }
+  @media(min-width: 1800px) {
+    background-image: url(../images/fam-header-2500.jpg);
+    height: 1215px;
+  }
+}
+
+.hero__bg {
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  transform: translate(-50%,-50%);
+}
+
+.hero__link {
+  color: $color-red;
+  font-size: 78px;
+  &:hover,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: $color-red;
+  }
+}
+
+.hero__icon {
+  position: relative;
+
+  span {
+    border-top-width: 16px;
+    border-bottom-width: 16px;
+    border-left-width: 25px;
+  }
+}

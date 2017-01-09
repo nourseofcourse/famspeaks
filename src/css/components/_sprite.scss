@@ -1,0 +1,59 @@
+.sprite {
+  height: 80px;
+  width: 80px;
+
+  background-image: url(../images/press-sprite.jpg);
+  background-repeat: no-repeat;
+
+  @include retina {
+    background-size: 280px 40px;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+  .sprite--forbes {
+    background-position: 0 0;
+  }
+
+  .sprite--idea {
+    background-position: -80px 0;
+    @include retina {
+      background-position: -40px 0;
+    }
+  }
+
+  .sprite--under30 {
+    background-position: -160px 0;
+    @include retina {
+      background-position: -80px 0;
+    }
+  }
+
+  .sprite--verge {
+    background-position: -240px 0;
+    @include retina {
+      background-position: -120px 0;
+    }
+  }
+
+  .sprite--th {
+    background-position: -320px 0;
+    @include retina {
+      background-position: -160px 0;
+    }
+  }
+
+  .sprite--inc {
+    background-position: -400px 0;
+    @include retina {
+      background-position: -200px 0;
+    }
+  }
+
+  .sprite--huff {
+    background-position: -480px 0;
+    @include retina {
+      background-position: -240px 0;
+    }
+  }

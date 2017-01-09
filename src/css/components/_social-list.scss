@@ -1,0 +1,121 @@
+.social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  text-align: center;
+}
+
+  .social-list__item {
+    display: block;
+    margin-bottom: 90px;
+    max-width: 465px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include retina {
+      margin-bottom: 45px;
+      max-width: 232px;
+    }
+
+    @media(min-width: $screen-sm-min) {
+      width: 33.333%;
+      float: left;
+      margin-bottom: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  .social-list__link {
+    font-size: 33px;
+    line-height: 48px;
+    font-family: "Museo Slab", helvetica, sans-serif;
+    letter-spacing: 0px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    position: relative;
+
+    @include retina {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 19px;
+      line-height: 34px;
+    }
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+
+      .icon {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+
+    &:focus,
+    &:active {
+      color: #fff;
+    }
+
+    .icon {
+      color: $color-red;
+      font-size: 137px;
+      line-height: 1;
+      letter-spacing: 0px;
+
+      padding-bottom: 30px;
+
+      -webkit-transition: color .3s ease-in-out;
+         -moz-transition: color .3s ease-in-out;
+          -ms-transition: color .3s ease-in-out;
+           -o-transition: color .3s ease-in-out;
+              transition: color .3s ease-in-out;
+
+      @include retina {
+        font-size: 68px; 
+
+        padding-bottom: 15px;
+      }
+
+      @media (min-width: $screen-sm-min) {
+        font-size: 95px; 
+        padding-bottom: 30px;
+      }
+    }
+
+  }
+
+    .social-list__badge {
+      border-radius: 100px;
+      font-size: 26px;
+      line-height: 1;
+      font-weight: 700;
+      padding: 11px 26px;
+      display: inline-block !important;
+      position: absolute;
+      right: 0;
+
+      @include retina {
+        font-size: 13px;
+        padding: 5px 13px;
+        border-radius: 50px;
+      }
+      @media(min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+        font-size: 17px;
+        padding: 8px 15px;
+      }
+    }
+
+    .social-list__badge--insta {
+      background-color: #918075;
+    }

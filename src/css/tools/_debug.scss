@@ -1,0 +1,5 @@
+@mixin debugging {
+  [data-ui-component] {
+      outline: 5px solid yellow;
+  }
+}

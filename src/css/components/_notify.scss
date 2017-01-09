@@ -1,0 +1,77 @@
+.notify {
+  text-align: center;
+}
+
+.notify--max {
+  max-width: 500px;
+  margin: 0 auto;
+
+  @media (max-width: $screen-xs-max) {
+    @include retina {
+      max-width: 250px;
+    }
+  }
+}
+
+.notify--top {
+  @media(max-width: $screen-sm-max) {
+    max-width: 500px;
+    margin: 0 auto;
+
+    .notify__title {
+      margin-bottom: 50px;
+
+      @include retina {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  @media (min-width: $screen-md-min) {
+    .notify__header {
+      float: left;
+      width: 50%;
+    }
+
+    .notify__title {
+      text-align: left;
+    }
+
+    .notify__form {
+      float: left;
+      width: 50%;
+    }
+
+    .form__error {
+      display: block;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .notify__email {
+      display: table-cell;
+      float: left;
+      margin-bottom: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0
+    }
+
+    .notify__submit {
+      position: relative;
+      left: -3px;
+      height: 68px;
+    }
+
+    .form__group__button {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    .form__group {
+      position: relative;
+      display: table;
+      border-collapse: separate;
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+}
