@@ -1,0 +1,515 @@
+  .contest {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,.8);
+    z-index: 1111;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility:inherit;
+    will-change:top;
+    transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+
+    .wrapper {
+      position: relative;
+
+    }
+
+    .form__input {
+      text-align: left;
+      background-color: #2B2A31;
+      color: #fff;
+    }
+
+    .band--contest-pitch {
+      padding-top: 80px;
+      padding-bottom: 100px;
+
+      @include retina {
+        padding-top: 40px;
+        padding-bottom: 50px;
+      }
+    }
+    .band__title--contest {
+      margin-bottom: 80px;
+      color: #fff;
+      @include retina {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .contest__wrapper {
+    max-width: 768px;
+    margin: 0 auto;
+    height: 100%;
+    -webkit-backface-visibility:inherit;
+
+    @media(max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .contest__back-link {
+    color: #AAABB8;
+    font-size: 45px;
+    line-height: 1;
+    letter-spacing: -1.29px;
+    margin-top: 90px;
+    display: block;
+
+    @include retina {
+      font-size: 22px;
+      letter-spacing: -.64px;
+      margin-top: 45px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $color-red;
+    }
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+      .content{ 
+          background-attachment: scroll;
+      }
+  }
+
+  .contest-hero {
+    background-image: url(../images/contest/contest-bg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    text-align: center;
+    padding: 200px 0 90px;
+    @include retina {
+      background-image: url(../images/contest/contest-bg@2x.jpg);
+      padding: 100px 0 45px;
+    }
+    &:before {
+      background-image: -webkit-linear-gradient(rgba(92,89,104,0.00) 4%, #3D3B48 48%);
+      background-image: -o-linear-gradient(rgba(92,89,104,0.00) 4%, #3D3B48 48%);
+      background-image: linear-gradient(rgba(92,89,104,0.00) 4%, #3D3B48 48%);
+      content: '';
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__title {
+      font-family: "Museo Slab";
+      font-size: 160px;
+      line-height: 105px;
+      color: #00CB83;
+      margin-top: 0;
+      margin-bottom: 68px;
+
+      span {
+        font-size: 100px;
+        color: #fff;
+        display: block;
+      }
+
+      @include retina {
+        font-size: 80px;
+        line-height: 53px;
+        margin-bottom: 34px;
+
+        span {
+          font-size: 50px;
+        }
+      }
+    }
+
+    &__support {
+      color: #fff;
+      font-size: 43px;
+      line-height: 60px;
+      letter-spacing: -1.78px;
+      margin-bottom: 70px;
+
+      @include retina {
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: -.89px;
+        margin-bottom: 35px;
+      }
+    }
+
+    &__button {
+      font-size: 32px;
+      padding: 30px 85px;
+
+      background-color: $color-red;
+      border-color: $color-red;
+      border-radius: 100px;
+      color: #fff;
+      margin-bottom: 70px;
+
+      @include retina {
+        font-size: 16px;
+        padding: 15px 42px;
+        border-radius: 50px;
+        margin-bottom: 35px; 
+      }
+
+      &:hover {
+        border-color: #00CB83;
+        background-color: #00CB83;
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+
+    &__copy {
+      color: #fff;
+      font-size: 33px;
+      line-height: 70px;
+      letter-spacing: -0.94px;
+
+      @include retina {
+        font-size: 16px;
+        line-height: 35px;
+        letter-spacing: -.47px; 
+      }
+    }
+  }
+  .contest-card {
+    width: 100%;
+    background: #2B2A31;
+    text-align: center;
+    &__object {
+      height: 100%;
+      width: 100%;
+    }
+
+    &__image {
+      padding-bottom: 68.01%;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    &__image-1 {
+      background-image: url(../images/contest/prize-1.jpg);
+
+      @include retina {
+        background-image: url(../images/contest/prize-1@2x.jpg);
+      }
+    }
+
+    &__image-2 {
+      background-image: url(../images/contest/prize-2.jpg);
+
+      @include retina {
+        background-image: url(../images/contest/prize-2@2x.jpg);
+      }
+    }
+
+    &__image-3 {
+      background-image: url(../images/contest/prize-3.jpg);
+
+      @include retina {
+        background-image: url(../images/contest/prize-3@2x.jpg);
+      }
+    }
+
+    &__body {
+      padding: 90px 75px 80px;
+      position: relative;
+
+      @include retina {
+        padding: 45px 37px 40px;
+      }
+    }
+
+    &__badge {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $color-red;
+      border-radius: 100px;
+      font-size: 27px;
+      font-family: helvetica, arial, sans-serif;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -1.12px;
+      padding: 16px 37px;
+      color: #fff;
+
+      @include retina {
+        top: -15px;
+        border-radius: 50px;
+        font-size: 13px;
+        letter-spacing: -.56px;
+        padding: 8px 18px; 
+      }
+    }
+
+    &__copy {
+      color: #AAABB8;
+      font-size: 33px;
+      line-height: 70px;
+      letter-spacing: -.94px;
+      max-width: 600px;
+      margin: 0 auto;
+
+      @include retina {
+        font-size: 16px;
+        line-height: 35px;
+        letter-spacing: -.47px;
+        max-width: 300px; 
+      }
+    }
+
+    &__icon {
+
+      background-repeat: no-repeat;;
+      background-size: 100%;
+      margin: 0 auto 60px;
+
+      @include retina {
+        margin-bottom: 30px; 
+      }
+    }
+
+    &__icon-mac {
+      background-image: url(../images/contest/icon-10k.png);
+      width: 166px;
+      height: 92px;
+
+      @include retina {
+        background-image: url(../images/contest/icon-10k@2x.png);
+        width: 83px;
+        height: 46px;
+      }
+    }
+
+    &__icon-ipad {
+      background-image: url(../images/contest/icon-ipad.png);
+      width: 88px;
+      height: 129px;
+
+      @include retina {
+        background-image: url(../images/contest/icon-pad@2x.png);
+        width: 44px;
+        height: 65px;
+      }
+    }
+
+    &__icon-giftcard {
+      background-image: url(../images/contest/icon-gift-card.png);
+      width: 141px;
+      height: 99px;
+
+      @include retina {
+        background-image: url(../images/contest/icon-gift-card@2x.png);
+        width: 70px;
+        height: 48px;
+      }
+    }
+
+  }
+
+  .home-hero {
+    padding: 102px 0 68px;
+
+    @media(min-width: $screen-md-min) {
+      background: url(../images/contest/desktop-header.jpg);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 578px;
+      padding: 0 30px; 
+      @include display(flex);
+      @include justify-content(center);
+      @include align-items(center);
+    }
+    @media (max-width: 768px) {
+      background: url(../images/contest/mobile-header-bg.jpg);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      padding: 95px 40px 70px;
+
+      @include retina {
+        padding: 47px 20px 35px;
+      }
+    }
+    text-align: center;
+
+    &__title {
+      font-family: "Museo Slab";
+      font-size: 133px;
+      line-height: 97px;
+      margin-bottom: 89px;
+      margin-top: 0;
+      color: #fff;
+
+      
+      span {
+        font-size: 100px;
+        color:#FFF;
+        display: block;
+        text-transform: uppercase;
+      }
+      @media (min-width:$screen-sm-min) and (max-width: $screen-sm-max) {
+        font-size: 128px;
+        line-height: 153px;
+        margin-bottom: 80px;
+
+        span {
+          font-size: 87px;
+          line-height: 104px;
+        }
+      }
+      @include retina {
+        font-size: 64px;
+        line-height: 77px;
+        margin-bottom: 39px;
+
+        span {
+          font-size: 43px;
+          line-height: 51.6px;
+        }
+      }
+      
+      @media(min-width: $screen-md-min) {
+        font-size: 84px;
+        line-height: 100px;
+        margin-bottom: 32px;
+        span {
+          display: inline-block;
+          font-size: 84px;
+          line-height: 100px;
+        }
+      }
+    }
+
+    &__play {
+      font-weight: 700;
+      font-size: 27.5px;
+      line-height: 1;
+      padding: 18px 36px;
+      background: $color-red;
+      border-color: $color-red;
+      border-radius: 28px;
+      color: #fff;
+      display: table;
+      margin: 0 auto 36px;
+
+      @include retina {
+        font-size: 14px;
+        padding: 10px 19px;
+        border-radius: 14px;
+      }
+
+      &:hover {
+        text-decoration: none;
+        background-color: #00CB83;
+        border-color: #00CB83;
+        color: #fff;
+      }
+
+      @media(min-width: $screen-md-min) {
+        display: inline-block;
+        margin-right: 12px;
+      }
+    }
+
+    &__link {
+      font-weight: 700;
+      font-size: 27.5px;
+      line-height: 1;
+      padding: 14px 32px;
+      background: transparent;
+      border-color: #fff;
+      border: 4px solid;
+      border-radius: 28px;
+      color: #fff;
+      display: table;
+      margin: 0 auto 36px;
+
+      @include retina {
+        font-size: 14px;
+        padding: 10px 19px;
+        border-radius: 14px;
+        border: 2px solid;
+      }
+
+      &:hover {
+        text-decoration: none;
+        background-color: $color-red;
+        border-color: $color-red;
+        color: #fff;
+      }
+      @media(min-width: $screen-md-min) {
+        display: inline-block;
+        margin-left: 12px;
+      }
+    }
+
+    &__image {
+      position: relative;
+      margin-bottom: 80px;
+      img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .home-hero__play {
+        position: absolute;
+        left: 50%;
+        top: -50px;
+        transform: translateX(-50%);
+        margin-bottom: 0;
+      }
+    }
+
+    &__arrow-icon {
+      background-image: url(../images/contest/right-arrows.png);
+      margin-left: 13px;
+      height: 23px;
+      width: 51px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      position: relative;
+      top: 2px;
+
+      @include retina {
+        background-size: 25px 11px;
+        width: 25px;
+        height: 11px;
+        margin-left: 6px;
+        top: 1px;
+      }
+    }
+
+    &__play-icon {
+      background-image: url(../images/contest/play-icon.png);
+      margin-right: 13px;
+      height: 24px;
+      width: 20px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      position: relative;
+      top: 2px;
+
+      @include retina {
+        background-size: 10px 12px;
+        width: 10px;
+        height: 12px;
+        margin-right: 6px;
+        top: 1px;
+      }
+    }
+  }
+

@@ -19,8 +19,13 @@
     letter-spacing: -.66px;
   }
 
+  .form__content--left & {
+    text-align: left;
+  }
+
 
 }
+
 
   .form__input--textarea {
     height: 200px;

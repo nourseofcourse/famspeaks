@@ -132,4 +132,46 @@
       });
     });
 
+  $('.js-message-form-2').submit(function(e) {
+      e.preventDefault();
+      var postdata = $('.form').serialize();
+
+
+      $.ajax({
+        type: 'POST',
+        url: window.location.protocol + '//' + window.location.host + '/assets/lib/hit-me.php',
+        data: postdata,
+        dataType: 'json',
+        success: function(json) {
+          if(json.valid == 0) {
+            $('.js-message-form-2 .form__error').hide();
+            $('.js-message-form-2 .form__error').html(json.message);
+            $('.js-message-form-2 .form__error').fadeIn('fast', function(){});
+          }
+          else {
+            $('.js-message-form-2 .form__error').hide();
+            $('.js-message-form-2 .form__content').fadeOut(function() {
+              $('.js-message-form-2 .form__success').html(json.message).fadeIn();
+            });
+            fbq('track', 'Lead');
+          }
+        }
+      });
+    });
+
+  $(".js-hero-scroll").click(function(e) {
+    e.preventDefault();
+      $('.contest').animate({
+          scrollTop: $("#pitch").offset().top},
+          'slow');
+  });
+
+  $(document).on('click', function(e) {
+    console.log(e.target.class);
+    if($(e.target).hasClass('contest')) {
+      $('.contest').hide();
+      $('body').css({overflow: 'visible'});
+    }
+  });
+
 }();
